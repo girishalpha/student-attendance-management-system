@@ -105,7 +105,7 @@ include('header.php');
 
 <script>
 $(document).ready(function(){
-	
+
   var dataTable = $('#grade_table').DataTable({
     "processing":true,
     "serverSide":true,

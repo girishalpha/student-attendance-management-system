@@ -62,6 +62,9 @@ if(!isset($_SESSION["admin_id"]))
         <a class="nav-link" href="attendance.php">Attendance</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="staffwork.php">Staff Work Diary</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="logout.php">Logout</a>
       </li>  
     </ul>

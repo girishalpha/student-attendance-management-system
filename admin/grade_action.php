@@ -51,7 +51,7 @@ if(isset($_POST["action"]))
 			"data"				=>	$data
 		);
 
-		
+
 	}
 	if($_POST["action"] == 'Add' || $_POST["action"] == "Edit")
 	{
@@ -82,9 +82,9 @@ if(isset($_POST["action"]))
 					':grade_name'				=>	$grade_name
 				);
 				$query = "
-				INSERT INTO tbl_grade 
-				(grade_name) 
-				SELECT * FROM (SELECT :grade_name) as temp 
+				INSERT INTO tbl_grade
+				(grade_name)
+				SELECT * FROM (SELECT :grade_name) as temp
 				WHERE NOT EXISTS (
 					SELECT grade_name FROM tbl_grade WHERE grade_name = :grade_name
 				) LIMIT 1
@@ -115,8 +115,8 @@ if(isset($_POST["action"]))
 				);
 
 				$query = "
-				UPDATE tbl_grade 
-				SET grade_name = :grade_name 
+				UPDATE tbl_grade
+				SET grade_name = :grade_name
 				WHERE grade_id = :grade_id
 				";
 				$statement = $connect->prepare($query);
@@ -150,7 +150,7 @@ if(isset($_POST["action"]))
 	if($_POST["action"] == "delete")
 	{
 		$query = "
-		DELETE FROM tbl_grade 
+		DELETE FROM tbl_grade
 		WHERE grade_id = '".$_POST["grade_id"]."'
 		";
 		$statement = $connect->prepare($query);
