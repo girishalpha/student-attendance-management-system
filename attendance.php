@@ -130,10 +130,10 @@ $result = $statement->fetchAll();
                       <input type="hidden" name="student_id[]" value="<?php echo $student["student_id"]; ?>" />
                     </td>
                     <td>
-                      <input type="radio" name="attendance_status<?php echo $student["student_id"]; ?>" value="Present" />
+                      <input type="radio" name="attendance_status<?php echo $student["student_id"]; ?>"checked value="Present" />
                     </td>
                     <td>
-                      <input type="radio" name="attendance_status<?php echo $student["student_id"]; ?>" checked value="Absent" />
+                      <input type="radio" name="attendance_status<?php echo $student["student_id"]; ?>"  value="Absent" />
                     </td>
                   </tr>
                 <?php

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Student Login </title>
+    <title>Teacher Login </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -25,11 +25,11 @@
 
     <div class="limiter">
         <div class="container-login100"><span style="text-align:center;font-size:50px;font-weight:500;" class="login100-form-title p-b-32">
-                      Student  Account Login
+                      Teacher  Account Login
                     </span>
             <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55"> 
                 <form method="post" id="teacher_login_form" class="login100-form validate-form flex-sb flex-w">
-                    
+
 
                     <span class="txt1 p-b-11">
                         Username

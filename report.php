@@ -77,9 +77,15 @@ if(isset($_GET["action"]))
 				';
 			}
 			$file_name = 'Attendance Report.pdf';
+			$pdf = new pdf();
 			$pdf->loadHtml($output);
 			$pdf->render();
-			$pdf->stream($file_name, array("Attachment" => false));
+			$canvas = $pdf->getCanvas();
+			$canvas->page_script('
+			  $pdf->set_opacity(.5);
+			  $pdf->image("/admin/images/logo.png", {x}, {y}, {w}, {h});
+			');
+			$pdf->stream($file_name, array("Attachment" => 0));
 			exit(0);
 		}
 	}
@@ -160,9 +166,15 @@ if(isset($_GET["action"]))
 				</table>
 				';
 				$file_name = 'Attendance Report.pdf';
+				$pdf = new pdf();
 				$pdf->loadHtml($output);
 				$pdf->render();
-				$pdf->stream($file_name, array("Attachment" => false));
+				$canvas = $pdf->getCanvas();
+				$canvas->page_script('
+				  $pdf->set_opacity(.5);
+				  $pdf->image("/admin/images/logo.png", {x}, {y}, {w}, {h});
+				');
+				$pdf->stream($file_name, array("Attachment" => 0));
 				exit(0);
 			}
 		}

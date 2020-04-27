@@ -11,21 +11,21 @@ if(isset($_POST["action"]))
 	if($_POST["action"] == "fetch")
 	{
 		$query = "
-		SELECT * FROM tbl_attendance 
-		INNER JOIN tbl_student 
-		ON tbl_student.student_id = tbl_attendance.student_id 
-		INNER JOIN tbl_grade 
-		ON tbl_grade.grade_id = tbl_student.student_grade_id 
+		SELECT * FROM tbl_attendance
+		INNER JOIN tbl_student
+		ON tbl_student.student_id = tbl_attendance.student_id
+		INNER JOIN tbl_grade
+		ON tbl_grade.grade_id = tbl_student.student_grade_id
 		WHERE tbl_attendance.teacher_id = '".$_SESSION["teacher_id"]."' AND (
 		";
 
 		if(isset($_POST["search"]["value"]))
 		{
 			$query .= '
-			tbl_student.student_name LIKE "%'.$_POST["search"]["value"].'%" 
-			OR tbl_student.student_roll_number LIKE "%'.$_POST["search"]["value"].'%" 
-			OR tbl_attendance.attendance_status LIKE "%'.$_POST["search"]["value"].'%" 
-			OR tbl_attendance.attendance_date LIKE "%'.$_POST["search"]["value"].'%") 
+			tbl_student.student_name LIKE "%'.$_POST["search"]["value"].'%"
+			OR tbl_student.student_roll_number LIKE "%'.$_POST["search"]["value"].'%"
+			OR tbl_attendance.attendance_status LIKE "%'.$_POST["search"]["value"].'%"
+			OR tbl_attendance.attendance_date LIKE "%'.$_POST["search"]["value"].'%")
 			';
 		}
 		if(isset($_POST["order"]))

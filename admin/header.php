@@ -15,7 +15,7 @@ if(!isset($_SESSION["admin_id"]))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Student Attendance System in PHP using Ajax</title>
+  <title>Student Attendance Management System in PHP</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
