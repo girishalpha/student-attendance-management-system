@@ -2,7 +2,7 @@
 
 //database_connection.php
 
-$connect = new PDO("mysql:host=localhost;dbname=attendance","root","");
+$connect = new PDO("mysql:host=k3xio06abqa902qt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=v69lpzivuzyu13it","tj12t05hr4ooncwp","j3nbt3k2oj6h134r");
 
 $base_url = "http://localhost/demo/check/";
 
