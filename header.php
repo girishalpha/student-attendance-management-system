@@ -14,7 +14,7 @@ if(!isset($_SESSION["teacher_id"]))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Student Attendance System</title>
+  <title>EPCHE Student Attendance System</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="css/bootstrap.min.css">
